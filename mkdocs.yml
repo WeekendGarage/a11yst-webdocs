@@ -1,0 +1,12 @@
+site_name: a11yst
+site_description: Continuous accessibility testing for modern web applications.
+# site_url is intentionally unset until a production domain is provided.
+use_directory_urls: true
+
+theme:
+  name: material
+  language: en
+  font: false
+
+extra:
+  generator: false

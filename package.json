@@ -3,6 +3,12 @@
   "private": true,
   "version": "0.1.0",
   "license": "MPL-2.0",
+  "scripts": {
+    "dev": "node scripts/ensure-venv.mjs && node scripts/dev.mjs",
+    "build": "node scripts/ensure-venv.mjs && node scripts/build.mjs",
+    "serve": "node scripts/ensure-venv.mjs && node scripts/serve.mjs",
+    "preview": "node scripts/ensure-venv.mjs && node scripts/serve.mjs"
+  },
   "engines": {
     "node": ">=20"
   }

@@ -9,7 +9,18 @@ This repository contains the public website and documentation. It is a static si
 ## Requirements
 
 - Node.js 20+
-- Python 3.10+
+- Python 3.10+ (`python3 -m venv`)
+
+## Bootstrap
+
+```bash
+pnpm build
+pnpm dev
+```
+
+The first run creates `.venv` and installs pinned dependencies from `requirements.txt`.
+
+Dev server default: `http://127.0.0.1:8000`
 
 ## Output
 

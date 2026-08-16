@@ -1,0 +1,4 @@
+# Pinned Python dependencies for a11yst documentation website (MkDocs + Material).
+# Install: python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
+mkdocs==1.6.1
+mkdocs-material==9.7.7
