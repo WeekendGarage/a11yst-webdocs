@@ -1,0 +1,68 @@
+$ a11yst audit
+Running accessibility audit...
+
+✓ Server ready · http://localhost:3000
+
+Auditing route 1/2 · /home · desktop
+Auditing route 2/2 · /settings · desktop
+
+Audit execution   SUCCESS
+
+Result: 3 issues found.
+
+Issue list:
+
+1 CRITICAL:
+- select-name
+  Select element must have an accessible name
+ Affected elements (1):
+
+  1. Likely source  src/components/LanguageSelector.jsx:24:7  (route: /settings)
+
+Recommendation
+  Associate a label with the select
+  Use a visible <label> or aria-label on the language selector.
+
+2 HIGH:
+  - link-name
+  Links must have discernible text
+  Affected elements (2):
+
+  1. Likely source  src/components/SocialLinks.jsx:18:6  (route: /home)
+  2. Likely source  src/components/SocialLinks.jsx:18:7  (route: /home)
+
+Recommendation
+  Provide visible link text or aria-label
+  Ensure each social link exposes an accessible name via visible text or aria-label.
+
+Summary:
+
+By level:
+
+Critical            1
+High                2
+
+By State:
+
+Planned             3
+Completed           0
+Skipped             0
+Failed runs         0
+
+By type:
+
+select-name        1
+link-name          2
+
+By route:
+
+/home              2
+/settings          1
+
+Reports:
+
+HTML        .a11yst/reports/audit.html
+Markdown    .a11yst/reports/audit.md
+JSON        .a11yst/reports/audit.json
+SARIF       .a11yst/reports/audit.sarif
+JUnit       .a11yst/reports/audit.junit.xml

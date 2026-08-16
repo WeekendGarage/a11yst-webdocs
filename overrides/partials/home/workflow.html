@@ -1,0 +1,66 @@
+<section class="a11yst-section a11yst-section--alt" aria-labelledby="a11yst-workflow-title">
+  <div class="a11yst-section__inner" data-reveal>
+    <h2 id="a11yst-workflow-title">How it works</h2>
+    <p class="a11yst-section__lead a11yst-workflow__lead">
+      Configure once, run audits in the browser, and compare the next run against your baseline.
+    </p>
+    <div class="a11yst-workflow-grid" data-workflow>
+      <svg
+        class="a11yst-workflow__trail"
+        aria-hidden="true"
+        focusable="false"
+        preserveAspectRatio="none"
+      >
+        <defs>
+          <filter
+            id="a11yst-workflow-glow"
+            x="-150%"
+            y="-150%"
+            width="400%"
+            height="400%"
+          >
+            <feGaussianBlur stdDeviation="26" />
+          </filter>
+        </defs>
+        <path class="a11yst-workflow__trail-path" id="a11yst-workflow-trail-path" />
+        <circle
+          class="a11yst-workflow__trail-glow"
+          r="54"
+          filter="url(#a11yst-workflow-glow)"
+        />
+      </svg>
+      <ol class="a11yst-workflow" role="list">
+      <li class="a11yst-workflow__item">
+        <span class="a11yst-workflow__index" aria-hidden="true">1</span>
+        <p class="a11yst-workflow__title">Configure</p>
+        <p class="a11yst-workflow__detail">Projects, routes, profiles, and viewports in <code>a11yst.config.ts</code>.</p>
+      </li>
+      <li class="a11yst-workflow__item">
+        <span class="a11yst-workflow__index" aria-hidden="true">2</span>
+        <p class="a11yst-workflow__title">Run</p>
+        <p class="a11yst-workflow__detail">Start your app or point a11yst at a preview URL.</p>
+      </li>
+      <li class="a11yst-workflow__item">
+        <span class="a11yst-workflow__index" aria-hidden="true">3</span>
+        <p class="a11yst-workflow__title">Audit</p>
+        <p class="a11yst-workflow__detail">Browser-based checks across real routes and flow checkpoints.</p>
+      </li>
+      <li class="a11yst-workflow__item">
+        <span class="a11yst-workflow__index" aria-hidden="true">4</span>
+        <p class="a11yst-workflow__title">Classify</p>
+        <p class="a11yst-workflow__detail">Findings grouped with severity labels and evidence.</p>
+      </li>
+      <li class="a11yst-workflow__item">
+        <span class="a11yst-workflow__index" aria-hidden="true">5</span>
+        <p class="a11yst-workflow__title">Map</p>
+        <p class="a11yst-workflow__detail">Likely source locations and recommendations when mapping succeeds.</p>
+      </li>
+      <li class="a11yst-workflow__item">
+        <span class="a11yst-workflow__index" aria-hidden="true">6</span>
+        <p class="a11yst-workflow__title">Compare</p>
+        <p class="a11yst-workflow__detail">Baseline comparison on the next run for regression signal.</p>
+      </li>
+      </ol>
+    </div>
+  </div>
+</section>

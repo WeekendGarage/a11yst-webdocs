@@ -1,0 +1,25 @@
+{% extends "main.html" %}
+
+{% block extrahead %}
+  <link rel="stylesheet" href="{{ 'stylesheets/home.css' | url }}">
+  <meta property="og:title" content="a11yst: Your accessibility analyst.">
+  <meta property="og:description" content="Continuous accessibility testing for real web applications.">
+  <meta property="og:type" content="website">
+{% endblock %}
+
+{% block content %}
+<div class="a11yst-landing">
+  {% include "partials/home/hero.html" %}
+  {% include "partials/home/workflow.html" %}
+  {% include "partials/home/why.html" %}
+  {% include "partials/home/getting-started.html" %}
+  {% include "partials/home/community.html" %}
+</div>
+{% endblock %}
+
+{% block footer %}{% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+  <script src="{{ 'javascripts/home.js' | url }}" defer></script>
+{% endblock %}

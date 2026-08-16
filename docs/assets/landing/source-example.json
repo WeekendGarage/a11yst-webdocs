@@ -1,0 +1,8 @@
+{
+  "severity": "HIGH",
+  "ruleId": "link-name",
+  "title": "Links must have discernible text",
+  "sourceLabel": "Likely source",
+  "sourcePath": "src/components/SocialLinks.jsx:19",
+  "recommendation": "Ensure each social link exposes an accessible name via visible text or aria-label."
+}

@@ -1,0 +1,4 @@
+{
+  "fixture": "tests/fixtures/website/landing-terminal-content.ts",
+  "formatter": "curated landing terminal (80 cols)"
+}

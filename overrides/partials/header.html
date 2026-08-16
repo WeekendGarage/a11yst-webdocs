@@ -1,6 +1,38 @@
 {#-
-a11yst docs header with search. The promotional home header is added with the landing.
+a11yst header: promotional nav on home, full Material header (with search) on docs.
 -#}
+{% if page.is_homepage %}
+{% set class = "md-header md-header--a11yst md-header--a11yst-home" %}
+<header class="{{ class }}" data-md-component="header">
+  <nav class="md-header__inner a11yst-home-header" aria-label="{{ lang.t('header') }}">
+    <a href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}" title="{{ config.site_name | e }}"
+      class="md-header__button md-logo" aria-label="{{ config.site_name }}" data-md-component="logo">
+      {% include "partials/logo.html" %}
+    </a>
+    <label class="md-header__button md-icon a11yst-home-header__menu" for="__drawer">
+      {% set icon = config.theme.icon.menu or "material/menu" %}
+      {% include ".icons/" ~ icon ~ ".svg" %}
+    </label>
+    <div class="a11yst-home-header__spacer" aria-hidden="true"></div>
+    <div class="a11yst-home-header__cluster">
+      <nav class="a11yst-home-header__nav" aria-label="Landing sections">
+        {% include "partials/home/header-nav.html" %}
+      </nav>
+      {% if config.theme.palette %}
+      {% if not config.theme.palette is mapping %}
+      {% include "partials/palette.html" %}
+      {% endif %}
+      {% endif %}
+      {% if not config.theme.palette is mapping %}
+      {% include "partials/javascripts/palette.html" %}
+      {% endif %}
+    </div>
+  </nav>
+  <nav class="a11yst-home-header__mobile" aria-label="Landing sections">
+    {% include "partials/home/header-nav.html" %}
+  </nav>
+</header>
+{% else %}
 {% set class = "md-header md-header--a11yst" %}
 <header class="{{ class }}" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="{{ lang.t('header') }}">
@@ -65,3 +97,4 @@ a11yst docs header with search. The promotional home header is added with the la
   {% endif %}
   {% endif %}
 </header>
+{% endif %}

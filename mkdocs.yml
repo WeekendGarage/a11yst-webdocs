@@ -3,6 +3,9 @@ site_description: Continuous accessibility testing for modern web applications.
 # site_url is intentionally unset until a production domain is provided.
 use_directory_urls: true
 
+exclude_docs: |
+  assets/landing/report-markdown.md
+
 theme:
   name: material
   custom_dir: overrides

@@ -1,0 +1,15 @@
+{
+  "run1": {
+    "label": "RUN 1",
+    "known": 4,
+    "new": 0,
+    "resolved": 0
+  },
+  "run2": {
+    "label": "RUN 2",
+    "known": 3,
+    "new": 1,
+    "resolved": 1
+  },
+  "narrative": "After code changes, a11yst compares the next audit against your baseline to surface new, regressed, and resolved findings."
+}

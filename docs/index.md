@@ -1,5 +1,10 @@
-# a11yst
+---
+template: home.html
+hide:
+  - navigation
+  - toc
+  - title
+description: Continuous accessibility testing for modern web applications.
+---
 
-Your accessibility analyst.
-
-Official documentation website for a11yst.
+<!-- Promotional landing content is rendered by overrides/home.html -->

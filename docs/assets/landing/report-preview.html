@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>a11yst accessibility report — landing-demo</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="report.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <h1>a11yst accessibility report — landing-demo</h1>
+      <p>Static accessibility audit results</p>
+      <nav aria-label="Report sections">
+        <ul>
+          <li><a href="#summary">Summary</a></li>
+          
+          <li><a href="#framework-integration">Framework integration</a></li>
+          <li><a href="#findings">Findings</a></li>
+          <li><a href="#runs">Runs</a></li>
+          <li><a href="#profile-evidence">Profile evidence</a></li>
+          <li><a href="#coverage">Coverage</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main-content">
+    <section id="summary" aria-labelledby="summary-title">
+      <h2 id="summary-title">Summary</h2>
+      <div class="summary-grid">
+        <div class="summary-card"><span>Total findings</span><strong>6</strong></div>
+        <div class="summary-card summary-card--critical"><span>Critical severity</span><strong>1</strong></div>
+        <div class="summary-card summary-card--high"><span>High severity</span><strong>5</strong></div>
+        <div class="summary-card summary-card--medium"><span>Medium severity</span><strong>0</strong></div>
+        <div class="summary-card summary-card--minor"><span>Minor severity</span><strong>0</strong></div>
+        <div class="summary-card"><span>Completed runs</span><strong>2</strong></div>
+        <div class="summary-card"><span>Skipped runs</span><strong>0</strong></div>
+        <div class="summary-card"><span>Failed runs</span><strong>0</strong></div>
+        
+      </div>
+      <p>Audit duration: 2.5 s</p>
+    </section>
+
+    
+
+    
+
+    <section id="framework-integration" aria-labelledby="framework-integration-title">
+      <h2 id="framework-integration-title">Framework integration</h2>
+      <div class="table-wrap" tabindex="0">
+      <table>
+        <caption class="visually-hidden">Framework integration per configured web project</caption>
+        <thead>
+          <tr>
+            <th scope="col">Project</th>
+            <th scope="col">Framework</th>
+            <th scope="col">Adapter</th>
+            <th scope="col">Support level</th>
+          </tr>
+        </thead>
+        <tbody><tr>
+          <td>demo</td>
+          <td>react</td>
+          <td>react</td>
+          <td>first-class</td>
+        </tr></tbody>
+      </table>
+    </div>
+
+      <h3 id="route-table-title">Resolved routes</h3>
+      <p class="muted">No resolved routes were recorded for this audit.</p>
+
+      <h3 id="skipped-patterns-title">Skipped dynamic patterns</h3>
+      <p class="muted">No dynamic route patterns were skipped.</p>
+
+      <h3 id="adapter-diagnostics-title">Adapter diagnostics</h3>
+      <p class="muted">No adapter diagnostics were recorded.</p>
+    </section>
+
+    <section id="findings" aria-labelledby="findings-title">
+      <h2 id="findings-title">Findings</h2>
+      <form class="filters" data-report-filters>
+        <div class="filter-grid">
+          
+          <div class="filter-field">
+            <label for="filter-severity">Severity</label>
+            <select id="filter-severity" name="severity">
+              <option value="">All severities</option>
+              <option value="critical">critical</option><option value="high">high</option><option value="medium">medium</option><option value="minor">minor</option>
+            </select>
+          </div>
+          <div class="filter-field">
+            <label for="filter-project">Project</label>
+            <select id="filter-project" name="project">
+              <option value="">All projects</option>
+              <option value="demo">demo</option>
+            </select>
+          </div>
+          <div class="filter-field">
+            <label for="filter-route">Route</label>
+            <select id="filter-route" name="route">
+              <option value="">All routes</option>
+              <option value="/">/</option><option value="/settings">/settings</option>
+            </select>
+          </div>
+          
+          
+          <div class="filter-field">
+            <label for="filter-viewport">Viewport</label>
+            <select id="filter-viewport" name="viewport">
+              <option value="">All viewports</option>
+              <option value="desktop">desktop</option>
+            </select>
+          </div>
+          <div class="filter-field">
+            <label for="filter-profile">Profile</label>
+            <select id="filter-profile" name="profile">
+              <option value="">All profiles</option>
+              <option value="default">default</option>
+            </select>
+          </div>
+          <div class="filter-field">
+            <label for="filter-source">Source</label>
+            <select id="filter-source" name="source">
+              <option value="">All sources</option>
+              <option value="axe">axe</option>
+            </select>
+          </div>
+          <div class="filter-field">
+            <label for="filter-automation">Automation</label>
+            <select id="filter-automation" name="automation">
+              <option value="">All automation types</option>
+              <option value="automated">automated</option>
+            </select>
+          </div>
+          <div class="filter-field">
+            <label for="filter-confidence">Confidence</label>
+            <select id="filter-confidence" name="confidence">
+              <option value="">All confidence levels</option>
+              <option value="high">high</option>
+            </select>
+          </div>
+          <div class="filter-field">
+            <label for="filter-rule">Rule</label>
+            <select id="filter-rule" name="rule">
+              <option value="">All rules</option>
+              <option value="link-name">link-name</option><option value="select-name">select-name</option>
+            </select>
+          </div>
+          <div class="filter-field">
+            <label for="filter-status">Run status</label>
+            <select id="filter-status" name="status">
+              <option value="">All statuses</option>
+              <option value="completed">completed</option>
+            </select>
+          </div>
+        </div>
+        <button type="reset">Clear filters</button>
+      </form>
+      <p class="result-count" data-result-count aria-live="polite">6 findings shown</p>
+      <div class="findings-list"><article class="finding finding--critical" data-finding
+        data-lifecycle="new"
+        data-severity="critical"
+        data-project="demo"
+        data-route="/settings"
+        data-flow=""
+        data-checkpoint=""
+        data-viewport="desktop"
+        data-profile="default"
+        data-source="axe"
+        data-rule="select-name"
+        data-disposition=""
+        data-expired="no"
+        data-owner=""
+        data-ticket="" data-fingerprint="select-name|demo|/settings|default|desktop|#language"
+        data-status="completed"
+        data-automation="automated"
+        data-confidence="high"
+        aria-labelledby="finding-0-title">
+        <h3 id="finding-0-title">Select element must have an accessible name</h3>
+        <p class="severity">Severity: CRITICAL</p>
+        <p>Form element does not have an associated label.</p>
+        <dl class="metadata">
+          <div><dt>Rule ID</dt><dd>select-name</dd></div>
+          <div><dt>Project</dt><dd>demo</dd></div>
+          <div><dt>Route</dt><dd>/settings</dd></div>
+          <div><dt>Flow</dt><dd>Not available</dd></div>
+          <div><dt>Checkpoint</dt><dd>Not available</dd></div>
+          <div><dt>URL</dt><dd>Not available</dd></div>
+          <div><dt>Viewport</dt><dd>desktop</dd></div>
+          <div><dt>Profile</dt><dd>default</dd></div>
+          <div><dt>Target</dt><dd>#language</dd></div>
+          <div><dt>Failure summary</dt><dd>Not available</dd></div>
+          <div><dt>Standards</dt><dd>wcag2a</dd></div>
+          <div><dt>Help URL</dt><dd>Not available</dd></div>
+          <div><dt>Fingerprint</dt><dd>select-name|demo|/settings|default|desktop|#language</dd></div>
+          <div><dt>Automation</dt><dd>automated</dd></div>
+          <div><dt>Confidence</dt><dd>high</dd></div>
+        </dl>
+        
+        <section class="finding-source" aria-labelledby="finding-source-select-name-1">
+        <h4>Source</h4>
+        <p>Probable source: <code>src/components/LanguageSelector.jsx:24:7</code></p>
+        <p>Confidence: high</p>
+        <p>Matched through selector match</p>
+      </section>
+        <section class="finding-recommendations" aria-labelledby="finding-recommendations-select-name-1">
+      <h4>Recommendations</h4>
+      <p>Status: recommended</p>
+      <p>Applicability: high</p>
+      <p>Use a visible &lt;label&gt; or aria-label on the language selector.</p>
+      
+      
+      
+      
+      <p class="muted">Automated recommendations do not establish WCAG conformance or guarantee a correct fix.</p>
+    </section>
+        <h4>HTML snippet</h4>
+        <p class="muted">No HTML snippet is available.</p>
+        <p class="muted">No screenshot evidence is available for this finding.</p>
+      </article><article class="finding finding--high" data-finding
+        data-lifecycle="new"
+        data-severity="high"
+        data-project="demo"
+        data-route="/"
+        data-flow=""
+        data-checkpoint=""
+        data-viewport="desktop"
+        data-profile="default"
+        data-source="axe"
+        data-rule="link-name"
+        data-disposition=""
+        data-expired="no"
+        data-owner=""
+        data-ticket="" data-fingerprint="link-name|demo|/|default|desktop|a:nth-child(1)"
+        data-status="completed"
+        data-automation="automated"
+        data-confidence="high"
+        aria-labelledby="finding-1-title">
+        <h3 id="finding-1-title">Links must have discernible text</h3>
+        <p class="severity">Severity: HIGH</p>
+        <p>Element has no discernible text for link purpose.</p>
+        <dl class="metadata">
+          <div><dt>Rule ID</dt><dd>link-name</dd></div>
+          <div><dt>Project</dt><dd>demo</dd></div>
+          <div><dt>Route</dt><dd>/</dd></div>
+          <div><dt>Flow</dt><dd>Not available</dd></div>
+          <div><dt>Checkpoint</dt><dd>Not available</dd></div>
+          <div><dt>URL</dt><dd>Not available</dd></div>
+          <div><dt>Viewport</dt><dd>desktop</dd></div>
+          <div><dt>Profile</dt><dd>default</dd></div>
+          <div><dt>Target</dt><dd>a.social-link-1</dd></div>
+          <div><dt>Failure summary</dt><dd>Not available</dd></div>
+          <div><dt>Standards</dt><dd>wcag2a</dd></div>
+          <div><dt>Help URL</dt><dd>Not available</dd></div>
+          <div><dt>Fingerprint</dt><dd>link-name|demo|/|default|desktop|a:nth-child(1)</dd></div>
+          <div><dt>Automation</dt><dd>automated</dd></div>
+          <div><dt>Confidence</dt><dd>high</dd></div>
+        </dl>
+        
+        <section class="finding-source" aria-labelledby="finding-source-link-name-1">
+        <h4>Source</h4>
+        <p>Probable source: <code>src/components/SocialLinks.jsx:18:6</code></p>
+        <p>Confidence: high</p>
+        <p>Matched through selector match</p>
+      </section>
+        <section class="finding-recommendations" aria-labelledby="finding-recommendations-link-name-1">
+      <h4>Recommendations</h4>
+      <p>Status: recommended</p>
+      <p>Applicability: high</p>
+      <p>Ensure each social link exposes an accessible name via visible text or aria-label.</p>
+      
+      
+      
+      
+      <p class="muted">Automated recommendations do not establish WCAG conformance or guarantee a correct fix.</p>
+    </section>
+        <h4>HTML snippet</h4>
+        <p class="muted">No HTML snippet is available.</p>
+        <p class="muted">No screenshot evidence is available for this finding.</p>
+      </article><article class="finding finding--high" data-finding
+        data-lifecycle="new"
+        data-severity="high"
+        data-project="demo"
+        data-route="/"
+        data-flow=""
+        data-checkpoint=""
+        data-viewport="desktop"
+        data-profile="default"
+        data-source="axe"
+        data-rule="link-name"
+        data-disposition=""
+        data-expired="no"
+        data-owner=""
+        data-ticket="" data-fingerprint="link-name|demo|/|default|desktop|a:nth-child(2)"
+        data-status="completed"
+        data-automation="automated"
+        data-confidence="high"
+        aria-labelledby="finding-2-title">
+        <h3 id="finding-2-title">Links must have discernible text</h3>
+        <p class="severity">Severity: HIGH</p>
+        <p>Element has no discernible text for link purpose.</p>
+        <dl class="metadata">
+          <div><dt>Rule ID</dt><dd>link-name</dd></div>
+          <div><dt>Project</dt><dd>demo</dd></div>
+          <div><dt>Route</dt><dd>/</dd></div>
+          <div><dt>Flow</dt><dd>Not available</dd></div>
+          <div><dt>Checkpoint</dt><dd>Not available</dd></div>
+          <div><dt>URL</dt><dd>Not available</dd></div>
+          <div><dt>Viewport</dt><dd>desktop</dd></div>
+          <div><dt>Profile</dt><dd>default</dd></div>
+          <div><dt>Target</dt><dd>a.social-link-2</dd></div>
+          <div><dt>Failure summary</dt><dd>Not available</dd></div>
+          <div><dt>Standards</dt><dd>wcag2a</dd></div>
+          <div><dt>Help URL</dt><dd>Not available</dd></div>
+          <div><dt>Fingerprint</dt><dd>link-name|demo|/|default|desktop|a:nth-child(2)</dd></div>
+          <div><dt>Automation</dt><dd>automated</dd></div>
+          <div><dt>Confidence</dt><dd>high</dd></div>
+        </dl>
+        
+        <section class="finding-source" aria-labelledby="finding-source-link-name-2">
+        <h4>Source</h4>
+        <p>Probable source: <code>src/components/SocialLinks.jsx:18:7</code></p>
+        <p>Confidence: high</p>
+        <p>Matched through selector match</p>
+      </section>
+        <section class="finding-recommendations" aria-labelledby="finding-recommendations-link-name-2">
+      <h4>Recommendations</h4>
+      <p>Status: recommended</p>
+      <p>Applicability: high</p>
+      <p>Ensure each social link exposes an accessible name via visible text or aria-label.</p>
+      
+      
+      
+      
+      <p class="muted">Automated recommendations do not establish WCAG conformance or guarantee a correct fix.</p>
+    </section>
+        <h4>HTML snippet</h4>
+        <p class="muted">No HTML snippet is available.</p>
+        <p class="muted">No screenshot evidence is available for this finding.</p>
+      </article><article class="finding finding--high" data-finding
+        data-lifecycle="new"
+        data-severity="high"
+        data-project="demo"
+        data-route="/"
+        data-flow=""
+        data-checkpoint=""
+        data-viewport="desktop"
+        data-profile="default"
+        data-source="axe"
+        data-rule="link-name"
+        data-disposition=""
+        data-expired="no"
+        data-owner=""
+        data-ticket="" data-fingerprint="link-name|demo|/|default|desktop|a:nth-child(3)"
+        data-status="completed"
+        data-automation="automated"
+        data-confidence="high"
+        aria-labelledby="finding-3-title">
+        <h3 id="finding-3-title">Links must have discernible text</h3>
+        <p class="severity">Severity: HIGH</p>
+        <p>Element has no discernible text for link purpose.</p>
+        <dl class="metadata">
+          <div><dt>Rule ID</dt><dd>link-name</dd></div>
+          <div><dt>Project</dt><dd>demo</dd></div>
+          <div><dt>Route</dt><dd>/</dd></div>
+          <div><dt>Flow</dt><dd>Not available</dd></div>
+          <div><dt>Checkpoint</dt><dd>Not available</dd></div>
+          <div><dt>URL</dt><dd>Not available</dd></div>
+          <div><dt>Viewport</dt><dd>desktop</dd></div>
+          <div><dt>Profile</dt><dd>default</dd></div>
+          <div><dt>Target</dt><dd>a.social-link-3</dd></div>
+          <div><dt>Failure summary</dt><dd>Not available</dd></div>
+          <div><dt>Standards</dt><dd>wcag2a</dd></div>
+          <div><dt>Help URL</dt><dd>Not available</dd></div>
+          <div><dt>Fingerprint</dt><dd>link-name|demo|/|default|desktop|a:nth-child(3)</dd></div>
+          <div><dt>Automation</dt><dd>automated</dd></div>
+          <div><dt>Confidence</dt><dd>high</dd></div>
+        </dl>
+        
+        <section class="finding-source" aria-labelledby="finding-source-link-name-3">
+        <h4>Source</h4>
+        <p>Probable source: <code>src/components/SocialLinks.jsx:18:8</code></p>
+        <p>Confidence: high</p>
+        <p>Matched through selector match</p>
+      </section>
+        <section class="finding-recommendations" aria-labelledby="finding-recommendations-link-name-3">
+      <h4>Recommendations</h4>
+      <p>Status: recommended</p>
+      <p>Applicability: high</p>
+      <p>Ensure each social link exposes an accessible name via visible text or aria-label.</p>
+      
+      
+      
+      
+      <p class="muted">Automated recommendations do not establish WCAG conformance or guarantee a correct fix.</p>
+    </section>
+        <h4>HTML snippet</h4>
+        <p class="muted">No HTML snippet is available.</p>
+        <p class="muted">No screenshot evidence is available for this finding.</p>
+      </article><article class="finding finding--high" data-finding
+        data-lifecycle="new"
+        data-severity="high"
+        data-project="demo"
+        data-route="/"
+        data-flow=""
+        data-checkpoint=""
+        data-viewport="desktop"
+        data-profile="default"
+        data-source="axe"
+        data-rule="link-name"
+        data-disposition=""
+        data-expired="no"
+        data-owner=""
+        data-ticket="" data-fingerprint="link-name|demo|/|default|desktop|a:nth-child(4)"
+        data-status="completed"
+        data-automation="automated"
+        data-confidence="high"
+        aria-labelledby="finding-4-title">
+        <h3 id="finding-4-title">Links must have discernible text</h3>
+        <p class="severity">Severity: HIGH</p>
+        <p>Element has no discernible text for link purpose.</p>
+        <dl class="metadata">
+          <div><dt>Rule ID</dt><dd>link-name</dd></div>
+          <div><dt>Project</dt><dd>demo</dd></div>
+          <div><dt>Route</dt><dd>/</dd></div>
+          <div><dt>Flow</dt><dd>Not available</dd></div>
+          <div><dt>Checkpoint</dt><dd>Not available</dd></div>
+          <div><dt>URL</dt><dd>Not available</dd></div>
+          <div><dt>Viewport</dt><dd>desktop</dd></div>
+          <div><dt>Profile</dt><dd>default</dd></div>
+          <div><dt>Target</dt><dd>a.social-link-4</dd></div>
+          <div><dt>Failure summary</dt><dd>Not available</dd></div>
+          <div><dt>Standards</dt><dd>wcag2a</dd></div>
+          <div><dt>Help URL</dt><dd>Not available</dd></div>
+          <div><dt>Fingerprint</dt><dd>link-name|demo|/|default|desktop|a:nth-child(4)</dd></div>
+          <div><dt>Automation</dt><dd>automated</dd></div>
+          <div><dt>Confidence</dt><dd>high</dd></div>
+        </dl>
+        
+        <section class="finding-source" aria-labelledby="finding-source-link-name-4">
+        <h4>Source</h4>
+        <p>Probable source: <code>src/components/SocialLinks.jsx:18:9</code></p>
+        <p>Confidence: high</p>
+        <p>Matched through selector match</p>
+      </section>
+        <section class="finding-recommendations" aria-labelledby="finding-recommendations-link-name-4">
+      <h4>Recommendations</h4>
+      <p>Status: recommended</p>
+      <p>Applicability: high</p>
+      <p>Ensure each social link exposes an accessible name via visible text or aria-label.</p>
+      
+      
+      
+      
+      <p class="muted">Automated recommendations do not establish WCAG conformance or guarantee a correct fix.</p>
+    </section>
+        <h4>HTML snippet</h4>
+        <p class="muted">No HTML snippet is available.</p>
+        <p class="muted">No screenshot evidence is available for this finding.</p>
+      </article><article class="finding finding--high" data-finding
+        data-lifecycle="new"
+        data-severity="high"
+        data-project="demo"
+        data-route="/"
+        data-flow=""
+        data-checkpoint=""
+        data-viewport="desktop"
+        data-profile="default"
+        data-source="axe"
+        data-rule="link-name"
+        data-disposition=""
+        data-expired="no"
+        data-owner=""
+        data-ticket="" data-fingerprint="link-name|demo|/|default|desktop|a:nth-child(5)"
+        data-status="completed"
+        data-automation="automated"
+        data-confidence="high"
+        aria-labelledby="finding-5-title">
+        <h3 id="finding-5-title">Links must have discernible text</h3>
+        <p class="severity">Severity: HIGH</p>
+        <p>Element has no discernible text for link purpose.</p>
+        <dl class="metadata">
+          <div><dt>Rule ID</dt><dd>link-name</dd></div>
+          <div><dt>Project</dt><dd>demo</dd></div>
+          <div><dt>Route</dt><dd>/</dd></div>
+          <div><dt>Flow</dt><dd>Not available</dd></div>
+          <div><dt>Checkpoint</dt><dd>Not available</dd></div>
+          <div><dt>URL</dt><dd>Not available</dd></div>
+          <div><dt>Viewport</dt><dd>desktop</dd></div>
+          <div><dt>Profile</dt><dd>default</dd></div>
+          <div><dt>Target</dt><dd>a.social-link-5</dd></div>
+          <div><dt>Failure summary</dt><dd>Not available</dd></div>
+          <div><dt>Standards</dt><dd>wcag2a</dd></div>
+          <div><dt>Help URL</dt><dd>Not available</dd></div>
+          <div><dt>Fingerprint</dt><dd>link-name|demo|/|default|desktop|a:nth-child(5)</dd></div>
+          <div><dt>Automation</dt><dd>automated</dd></div>
+          <div><dt>Confidence</dt><dd>high</dd></div>
+        </dl>
+        
+        <section class="finding-source" aria-labelledby="finding-source-link-name-5">
+        <h4>Source</h4>
+        <p>Probable source: <code>src/components/SocialLinks.jsx:18:10</code></p>
+        <p>Confidence: high</p>
+        <p>Matched through selector match</p>
+      </section>
+        <section class="finding-recommendations" aria-labelledby="finding-recommendations-link-name-5">
+      <h4>Recommendations</h4>
+      <p>Status: recommended</p>
+      <p>Applicability: high</p>
+      <p>Ensure each social link exposes an accessible name via visible text or aria-label.</p>
+      
+      
+      
+      
+      <p class="muted">Automated recommendations do not establish WCAG conformance or guarantee a correct fix.</p>
+    </section>
+        <h4>HTML snippet</h4>
+        <p class="muted">No HTML snippet is available.</p>
+        <p class="muted">No screenshot evidence is available for this finding.</p>
+      </article></div>
+    </section>
+
+    <section id="runs" aria-labelledby="runs-title">
+      <h2 id="runs-title">Runs</h2>
+      <div class="run-grid"><article class="run" aria-labelledby="run-0-title">
+        <h3 id="run-0-title">demo — /settings</h3>
+        <p class="status">Status: completed</p>
+        <dl class="metadata">
+          <div><dt>Run ID</dt><dd>run-settings</dd></div>
+          <div><dt>Kind</dt><dd>route</dd></div>
+          <div><dt>Profile</dt><dd>default</dd></div>
+          <div><dt>Viewport</dt><dd>desktop</dd></div>
+          <div><dt>URL</dt><dd>http://127.0.0.1:5173/settings</dd></div>
+          <div><dt>Duration</dt><dd>900 ms</dd></div>
+          <div><dt>Findings</dt><dd>1</dd></div>
+          
+          <div><dt>Readiness strategy</dt><dd>#root, [data-reactroot], body</dd></div>
+          <div><dt>Skip reason</dt><dd>Not available</dd></div>
+        </dl>
+        
+        <p class="muted">No run screenshot is available.</p>
+        
+        <h4>Diagnostics</h4>
+        <p class="muted">No diagnostics.</p>
+      </article><article class="run" aria-labelledby="run-1-title">
+        <h3 id="run-1-title">demo — /</h3>
+        <p class="status">Status: completed</p>
+        <dl class="metadata">
+          <div><dt>Run ID</dt><dd>run-home</dd></div>
+          <div><dt>Kind</dt><dd>route</dd></div>
+          <div><dt>Profile</dt><dd>default</dd></div>
+          <div><dt>Viewport</dt><dd>desktop</dd></div>
+          <div><dt>URL</dt><dd>http://127.0.0.1:5173/</dd></div>
+          <div><dt>Duration</dt><dd>1.1 s</dd></div>
+          <div><dt>Findings</dt><dd>5</dd></div>
+          
+          <div><dt>Readiness strategy</dt><dd>#root, [data-reactroot], body</dd></div>
+          <div><dt>Skip reason</dt><dd>Not available</dd></div>
+        </dl>
+        
+        <p class="muted">No run screenshot is available.</p>
+        
+        <h4>Diagnostics</h4>
+        <p class="muted">No diagnostics.</p>
+      </article></div>
+    </section>
+
+    <section id="profile-evidence" aria-labelledby="profile-evidence-title">
+      <h2 id="profile-evidence-title">Profile evidence</h2>
+      <p class="muted">Structured keyboard focus sequences and large-text before/after comparisons captured during profile runs.</p>
+      <p class="muted">No structured profile evidence was recorded for this audit.</p>
+    </section>
+
+    <section id="coverage" aria-labelledby="coverage-title">
+      <h2 id="coverage-title">Coverage and limitations</h2>
+      <h3 id="profile-coverage-title">Profile coverage</h3>
+      <p class="muted">Profile coverage summary is not available for this audit.</p>
+      <div class="disclaimers">
+        <p>Accessibility profiles approximate test conditions. They do not reproduce the complete experience of disabled users or assistive technologies.</p>
+        <p>a11yst does not certify WCAG conformance.</p>
+        <p>Automated checks cover only part of accessibility.</p>
+        <p>Manual review and testing with disabled users remain necessary.</p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>Generated by a11yst for audit landing-demo.</p>
+  </footer>
+</body>
+</html>

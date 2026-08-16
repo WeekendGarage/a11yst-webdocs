@@ -1,0 +1,129 @@
+{% macro setup_code_install() %}
+<div class="highlight">
+  <pre><span></span><code>pnpm add -D @a11yst/cli
+pnpm exec playwright install chromium</code></pre>
+</div>
+{% endmacro %}
+
+{% macro setup_code_init() %}
+<div class="highlight">
+  <pre><span></span><code>a11yst init
+a11yst detect</code></pre>
+</div>
+{% endmacro %}
+
+{% macro setup_code_audit() %}
+<div class="highlight">
+  <pre><span></span><code>a11yst audit</code></pre>
+</div>
+{% endmacro %}
+
+{% macro setup_code_reports() %}
+<div class="highlight">
+  <pre><span></span><code>HTML        .a11yst/reports/audit.html
+Markdown    .a11yst/reports/audit.md
+JSON        .a11yst/reports/audit.json
+SARIF       .a11yst/reports/audit.sarif
+JUnit       .a11yst/reports/audit.junit.xml</code></pre>
+</div>
+{% endmacro %}
+
+<section class="a11yst-section a11yst-section--alt a11yst-getting-started" id="a11yst-getting-started"
+  aria-labelledby="a11yst-getting-started-title">
+  <div class="a11yst-section__inner" data-reveal>
+    <h2 id="a11yst-getting-started-title">Getting started</h2>
+    <p class="a11yst-section__lead a11yst-getting-started__lead">
+      Browser checks, profiles, and structured reports ship in one CLI. Install dependencies once, initialize your
+      project, and your first audit is ready in minutes.
+    </p>
+
+    <div class="a11yst-setup" data-setup-selector>
+      <div class="a11yst-setup__layout">
+        <ol class="a11yst-setup__nav" role="tablist" aria-label="Getting started steps">
+          <li class="a11yst-setup-step is-active" role="presentation">
+            <button type="button" class="a11yst-setup-step__trigger" role="tab"
+              id="a11yst-setup-tab-0" aria-controls="a11yst-setup-panel-0" aria-selected="true">
+              <span class="a11yst-setup-step__number" aria-hidden="true">01</span>
+              <span class="a11yst-setup-step__label">Install a11yst</span>
+            </button>
+          </li>
+          <li class="a11yst-setup-step" role="presentation">
+            <button type="button" class="a11yst-setup-step__trigger" role="tab"
+              id="a11yst-setup-tab-1" aria-controls="a11yst-setup-panel-1" aria-selected="false" tabindex="-1">
+              <span class="a11yst-setup-step__number" aria-hidden="true">02</span>
+              <span class="a11yst-setup-step__label">Initialize your project</span>
+            </button>
+          </li>
+          <li class="a11yst-setup-step" role="presentation">
+            <button type="button" class="a11yst-setup-step__trigger" role="tab"
+              id="a11yst-setup-tab-2" aria-controls="a11yst-setup-panel-2" aria-selected="false" tabindex="-1">
+              <span class="a11yst-setup-step__number" aria-hidden="true">03</span>
+              <span class="a11yst-setup-step__label">Run your first audit</span>
+            </button>
+          </li>
+          <li class="a11yst-setup-step" role="presentation">
+            <button type="button" class="a11yst-setup-step__trigger" role="tab"
+              id="a11yst-setup-tab-3" aria-controls="a11yst-setup-panel-3" aria-selected="false" tabindex="-1">
+              <span class="a11yst-setup-step__number" aria-hidden="true">04</span>
+              <span class="a11yst-setup-step__label">Review your reports</span>
+            </button>
+          </li>
+        </ol>
+
+        <div class="a11yst-setup__stage">
+          <div class="a11yst-setup-step__panel" role="tabpanel" id="a11yst-setup-panel-0"
+            aria-labelledby="a11yst-setup-tab-0">
+            {{ setup_code_install() }}
+          </div>
+          <div class="a11yst-setup-step__panel" role="tabpanel" id="a11yst-setup-panel-1"
+            aria-labelledby="a11yst-setup-tab-1" hidden>
+            {{ setup_code_init() }}
+          </div>
+          <div class="a11yst-setup-step__panel" role="tabpanel" id="a11yst-setup-panel-2"
+            aria-labelledby="a11yst-setup-tab-2" hidden>
+            {{ setup_code_audit() }}
+          </div>
+          <div class="a11yst-setup-step__panel" role="tabpanel" id="a11yst-setup-panel-3"
+            aria-labelledby="a11yst-setup-tab-3" hidden>
+            {{ setup_code_reports() }}
+          </div>
+        </div>
+      </div>
+
+      <ol class="a11yst-setup__mobile" aria-label="Getting started steps">
+        <li class="a11yst-setup-mobile-step">
+          <span class="a11yst-setup-mobile-step__label">
+            <span class="a11yst-setup-step__number" aria-hidden="true">01</span>
+            Install a11yst
+          </span>
+          {{ setup_code_install() }}
+        </li>
+        <li class="a11yst-setup-mobile-step">
+          <span class="a11yst-setup-mobile-step__label">
+            <span class="a11yst-setup-step__number" aria-hidden="true">02</span>
+            Initialize your project
+          </span>
+          {{ setup_code_init() }}
+        </li>
+        <li class="a11yst-setup-mobile-step">
+          <span class="a11yst-setup-mobile-step__label">
+            <span class="a11yst-setup-step__number" aria-hidden="true">03</span>
+            Run your first audit
+          </span>
+          {{ setup_code_audit() }}
+        </li>
+        <li class="a11yst-setup-mobile-step">
+          <span class="a11yst-setup-mobile-step__label">
+            <span class="a11yst-setup-step__number" aria-hidden="true">04</span>
+            Review your reports
+          </span>
+          {{ setup_code_reports() }}
+        </li>
+      </ol>
+    </div>
+
+    <p class="a11yst-getting-started__docs">
+      Want more detail? <a href="{{ 'getting-started/' | url }}">Read the docs</a>.
+    </p>
+  </div>
+</section>

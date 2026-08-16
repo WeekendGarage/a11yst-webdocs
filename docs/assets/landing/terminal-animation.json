@@ -1,0 +1,125 @@
+[
+  {
+    "action": "type",
+    "text": "$ ",
+    "class": "t-prompt",
+    "msPerChar": 48
+  },
+  {
+    "action": "type",
+    "text": "a11yst audit",
+    "msPerChar": 48
+  },
+  {
+    "action": "wait",
+    "ms": 1000
+  },
+  {
+    "action": "type",
+    "text": "\nRunning accessibility audit...",
+    "msPerChar": 48
+  },
+  {
+    "action": "wait",
+    "ms": 1000
+  },
+  {
+    "action": "type",
+    "text": "\n\n",
+    "msPerChar": 48
+  },
+  {
+    "action": "type",
+    "text": "✓ Server ready · ",
+    "class": "t-success",
+    "msPerChar": 48
+  },
+  {
+    "action": "type",
+    "text": "http://localhost:3000",
+    "class": "t-link",
+    "msPerChar": 48
+  },
+  {
+    "action": "wait",
+    "ms": 1000
+  },
+  {
+    "action": "type",
+    "text": "\n\nAuditing route 1/2 · /home · desktop",
+    "msPerChar": 48
+  },
+  {
+    "action": "wait",
+    "ms": 2000
+  },
+  {
+    "action": "type",
+    "text": "\nAuditing route 2/2 · /settings · desktop",
+    "msPerChar": 48
+  },
+  {
+    "action": "wait",
+    "ms": 2000
+  },
+  {
+    "action": "type",
+    "text": "\n\n",
+    "msPerChar": 48
+  },
+  {
+    "action": "type",
+    "text": "Audit execution   SUCCESS",
+    "class": "t-bold",
+    "msPerChar": 48
+  },
+  {
+    "action": "type",
+    "text": "\n\nResult: 3 issues found.\n\nIssue list:\n\n1 ",
+    "msPerChar": 48
+  },
+  {
+    "action": "type",
+    "text": "CRITICAL",
+    "class": "t-critical",
+    "msPerChar": 48
+  },
+  {
+    "action": "type",
+    "text": ":\n- select-name\n  Select element must have an accessible name\n Affected elements (1):\n\n  1. Likely source  src/components/LanguageSelector.jsx:24:7  (route: /settings)\n\nRecommendation\n  Associate a label with the select\n  Use a visible <label> or aria-label on the language selector.\n\n2 ",
+    "msPerChar": 48
+  },
+  {
+    "action": "type",
+    "text": "HIGH",
+    "class": "t-high",
+    "msPerChar": 48
+  },
+  {
+    "action": "type",
+    "text": ":\n  - link-name\n  Links must have discernible text\n  Affected elements (2):\n\n  1. Likely source  src/components/SocialLinks.jsx:18:6  (route: /home)\n  2. Likely source  src/components/SocialLinks.jsx:18:7  (route: /home)\n\nRecommendation\n  Provide visible link text or aria-label\n  Ensure each social link exposes an accessible name via visible text or aria-label.\n\nSummary:\n\nBy level:\n\n",
+    "msPerChar": 48
+  },
+  {
+    "action": "type",
+    "text": "Critical",
+    "class": "t-critical",
+    "msPerChar": 48
+  },
+  {
+    "action": "type",
+    "text": "            1\n",
+    "msPerChar": 48
+  },
+  {
+    "action": "type",
+    "text": "High",
+    "class": "t-high",
+    "msPerChar": 48
+  },
+  {
+    "action": "type",
+    "text": "                2\n\nBy State:\n\nPlanned             3\nCompleted           0\nSkipped             0\nFailed runs         0\n\nBy type:\n\nselect-name        1\nlink-name          2\n\nBy route:\n\n/home              2\n/settings          1\n\nReports:\n\nHTML        .a11yst/reports/audit.html\nMarkdown    .a11yst/reports/audit.md\nJSON        .a11yst/reports/audit.json\nSARIF       .a11yst/reports/audit.sarif\nJUnit       .a11yst/reports/audit.junit.xml",
+    "msPerChar": 48
+  }
+]

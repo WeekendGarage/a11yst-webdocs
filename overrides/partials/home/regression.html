@@ -1,0 +1,30 @@
+<section class="a11yst-section a11yst-section--alt" aria-labelledby="a11yst-regression-title">
+  <div class="a11yst-section__inner a11yst-split" data-reveal>
+    <div class="a11yst-split__copy">
+      <h2 id="a11yst-regression-title">Baseline comparison</h2>
+      <p class="a11yst-section__lead">
+        After code changes, a11yst compares the next audit against your baseline to surface new, regressed, and resolved findings.
+      </p>
+      <p>Known findings stay tracked. New issues stand out. Resolved issues can be confirmed instead of re-triaged from scratch.</p>
+    </div>
+    <div class="a11yst-split__visual">
+      <div class="a11yst-regression" aria-label="Example baseline comparison">
+        <div class="a11yst-regression__run">
+          <p class="a11yst-regression__label">RUN 1</p>
+          <ul>
+            <li><span class="a11yst-sev a11yst-sev--known">KNOWN</span> 4 findings</li>
+          </ul>
+        </div>
+        <p class="a11yst-regression__arrow" aria-hidden="true">↓ code changes ↓</p>
+        <div class="a11yst-regression__run">
+          <p class="a11yst-regression__label">RUN 2</p>
+          <ul>
+            <li><span class="a11yst-sev a11yst-sev--known">KNOWN</span> 3 findings</li>
+            <li><span class="a11yst-sev a11yst-sev--new">NEW</span> 1 finding</li>
+            <li><span class="a11yst-sev a11yst-sev--resolved">RESOLVED</span> 1 finding</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

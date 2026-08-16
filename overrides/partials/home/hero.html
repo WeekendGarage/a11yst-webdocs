@@ -1,0 +1,42 @@
+<section class="a11yst-hero" aria-labelledby="a11yst-hero-title">
+  <div class="a11yst-hero__inner">
+    <div class="a11yst-hero__copy">
+      <h1 id="a11yst-hero-title" class="a11yst-hero__title">
+        <span class="a11yst-hero__symbol" aria-hidden="true"></span>
+        <span class="a11yst-hero__word">a11yst</span>
+      </h1>
+      <p class="a11yst-hero__tagline">Your accessibility analyst.</p>
+      <p class="a11yst-hero__lead">
+        Continuous accessibility testing for real web applications (routes, flows, profiles, viewports, and CI).
+      </p>
+      <div class="a11yst-hero__install">
+        <div class="highlight">
+          <pre><span></span><code>pnpm add -D @a11yst/cli
+pnpm exec playwright install chromium</code></pre>
+        </div>
+      </div>
+      <div class="a11yst-hero__actions">
+        <a class="md-button md-button--primary" href="#a11yst-getting-started">Get started</a>
+        <a class="md-button" href="{{ 'getting-started/' | url }}">Read the docs</a>
+      </div>
+    </div>
+    <div class="a11yst-hero__visual" data-terminal>
+      <div class="a11yst-terminal a11yst-terminal--hero" data-terminal>
+        <div class="a11yst-terminal__bar">
+          <span class="a11yst-terminal__dots" aria-hidden="true">
+            <span class="a11yst-terminal__dot a11yst-terminal__dot--close"></span>
+            <span class="a11yst-terminal__dot a11yst-terminal__dot--minimize"></span>
+            <span class="a11yst-terminal__dot a11yst-terminal__dot--expand"></span>
+          </span>
+          <span class="a11yst-terminal__title">zsh · 80×24</span>
+          <button type="button" class="a11yst-terminal__skip" data-terminal-skip hidden>
+            Skip
+          </button>
+        </div>
+        <div class="a11yst-terminal__body" tabindex="0" role="region" aria-label="Audit terminal output">
+          {% include "partials/home/terminal-static.html" %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

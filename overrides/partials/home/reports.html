@@ -1,0 +1,35 @@
+<section class="a11yst-section a11yst-section--alt" aria-labelledby="a11yst-reports-title">
+  <div class="a11yst-section__inner" data-reveal>
+    <h2 id="a11yst-reports-title">Reports for every audience</h2>
+    <p class="a11yst-section__lead">Terminal output for developers, readable HTML and Markdown for review, and JSON, SARIF, and JUnit for automation.</p>
+    <div class="a11yst-reports">
+      <div class="a11yst-report-previews">
+        <section class="a11yst-report-preview" aria-labelledby="a11yst-report-terminal-title">
+          <h3 id="a11yst-report-terminal-title">Terminal</h3>
+          <pre class="a11yst-report-snippet"><code>CRITICAL  select-name  1  src/components/LanguageSelector.jsx:24:7
+HIGH  link-name  5  src/components/SocialLinks.jsx:18:6 +4
+
+Unique issues       2
+Affected elements   6</code></pre>
+        </section>
+        <section class="a11yst-report-preview" aria-labelledby="a11yst-report-html-title">
+          <h3 id="a11yst-report-html-title">HTML</h3>
+          <iframe class="a11yst-report-frame" title="a11yst HTML report preview" src="{{ 'assets/landing/report-preview.html' | url }}" loading="lazy"></iframe>
+        </section>
+        <section class="a11yst-report-preview" aria-labelledby="a11yst-report-markdown-title">
+          <h3 id="a11yst-report-markdown-title">Markdown</h3>
+          <pre class="a11yst-report-snippet"><code># a11yst report
+
+| Severity | Count |
+| --- | ---: |
+| CRITICAL | 1 |
+| HIGH | 5 |
+
+Likely source: src/components/LanguageSelector.jsx:24</code></pre>
+        </section>
+      </div>
+      <p class="a11yst-reports__machine">Machine formats: JSON · SARIF · JUnit</p>
+      <p><a href="{{ 'reports/' | url }}">Explore report formats</a></p>
+    </div>
+  </div>
+</section>
