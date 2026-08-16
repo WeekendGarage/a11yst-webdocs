@@ -1,0 +1,9 @@
+{
+  "name": "a11yst-webdocs",
+  "private": true,
+  "version": "0.1.0",
+  "license": "MPL-2.0",
+  "engines": {
+    "node": ">=20"
+  }
+}

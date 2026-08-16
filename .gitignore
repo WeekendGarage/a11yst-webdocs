@@ -1,0 +1,14 @@
+node_modules
+.pnpm-store
+site/
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+.a11yst/
+**/.a11yst/results/**
+*.log
+coverage
+*.tsbuildinfo
+.tmp
+.tmp-*
