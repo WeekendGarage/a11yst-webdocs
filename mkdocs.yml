@@ -79,3 +79,12 @@ nav:
     - Source mapping: source-intelligence/source-mapping.md
     - Recommendations: source-intelligence/recommendations.md
     - Limitations: source-intelligence/limitations.md
+  - Frameworks:
+    - Frameworks overview: frameworks/index.md
+    - HTML: frameworks/html.md
+    - React: frameworks/react.md
+    - Next.js: frameworks/next.md
+    - Vue: frameworks/vue.md
+    - Nuxt: frameworks/nuxt.md
+    - Angular: frameworks/angular.md
+  - CI: ci/index.md
