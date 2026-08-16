@@ -6,7 +6,25 @@ use_directory_urls: true
 theme:
   name: material
   language: en
+  logo: assets/brand/a11yst-lockup.svg
+  favicon: assets/brand/favicon.svg
   font: false
+  palette:
+    - scheme: default
+      primary: custom
+      accent: teal
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: custom
+      accent: teal
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+extra_css:
+  - stylesheets/extra.css
 
 extra:
   generator: false
