@@ -60,3 +60,6 @@ extra_javascript:
 
 extra:
   generator: false
+
+nav:
+  - Getting Started: getting-started/index.md
