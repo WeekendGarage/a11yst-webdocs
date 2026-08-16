@@ -5,10 +5,18 @@ use_directory_urls: true
 
 theme:
   name: material
+  custom_dir: overrides
   language: en
   logo: assets/brand/a11yst-lockup.svg
   favicon: assets/brand/favicon.svg
   font: false
+  features:
+    - navigation.sections
+    - navigation.tracking
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
   palette:
     - scheme: default
       primary: custom
@@ -23,8 +31,29 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
 
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      title: On this page
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
 extra_css:
   - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/a11y-fixes.js
 
 extra:
   generator: false
