@@ -96,3 +96,7 @@ nav:
     - Exit codes: reference/exit-codes.md
     - Result model: reference/result-model.md
   - Troubleshooting: troubleshooting/index.md
+  - Community:
+    - Community overview: community/index.md
+    - Contributing: community/contributing.md
+    - License: community/license.md
