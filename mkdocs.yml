@@ -63,3 +63,19 @@ extra:
 
 nav:
   - Getting Started: getting-started/index.md
+  - Core Concepts:
+    - Core concepts overview: core-concepts/index.md
+    - Route discovery and planning: core-concepts/route-discovery-and-planning.md
+  - Regression Testing:
+    - Regression testing overview: regression-testing/index.md
+    - Baselines: regression-testing/baselines.md
+    - Classifications: regression-testing/classifications.md
+    - Updating a baseline: regression-testing/updating-baseline.md
+    - Policies: regression-testing/policies.md
+    - CI workflow: regression-testing/ci-workflow.md
+  - Reports: reports/index.md
+  - Source Intelligence:
+    - Source intelligence overview: source-intelligence/index.md
+    - Source mapping: source-intelligence/source-mapping.md
+    - Recommendations: source-intelligence/recommendations.md
+    - Limitations: source-intelligence/limitations.md
