@@ -88,3 +88,11 @@ nav:
     - Nuxt: frameworks/nuxt.md
     - Angular: frameworks/angular.md
   - CI: ci/index.md
+  - Reference:
+    - Reference overview: reference/index.md
+    - CLI: reference/cli.md
+    - Configuration: reference/configuration.md
+    - Environment variables: reference/environment-variables.md
+    - Exit codes: reference/exit-codes.md
+    - Result model: reference/result-model.md
+  - Troubleshooting: troubleshooting/index.md
