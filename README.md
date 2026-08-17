@@ -15,6 +15,7 @@ This repository contains the public website and documentation. It is a static si
 
 ```bash
 pnpm build
+pnpm test
 pnpm dev
 ```
 
