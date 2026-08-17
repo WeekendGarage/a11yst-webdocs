@@ -593,6 +593,8 @@
 
     bindNavLinks(header);
     if (footer) bindNavLinks(footer);
+    var landing = document.querySelector(".a11yst-landing");
+    if (landing) bindNavLinks(landing);
 
     function onUserScrollIntent() {
       if (pinnedNavId && navArrived) userScrollDetected = true;

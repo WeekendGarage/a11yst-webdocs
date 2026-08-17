@@ -306,6 +306,12 @@ body:has(> .md-header--a11yst) .md-container {
   color: #1e3a8a;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  html:has(.a11yst-landing) {
+    scroll-behavior: smooth;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
