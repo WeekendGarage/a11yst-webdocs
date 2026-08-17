@@ -37,6 +37,15 @@ pnpm test:dogfood
 
 Dev server default: `http://127.0.0.1:8000`
 
+## Release gate
+
+The standalone release check is:
+
+```bash
+pnpm gate        # delete site/, build twice, unit tests
+pnpm gate:full   # plus browser checks (dogfood runs only if A11YST_BIN is set)
+```
+
 ## Output
 
-Static build output is written to `site/` (gitignored).
+Static build output is written to `site/` (gitignored). `.venv/` and `.a11yst/` are also gitignored.

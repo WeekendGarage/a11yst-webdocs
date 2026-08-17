@@ -12,7 +12,9 @@
     "test": "vitest run tests/unit",
     "test:unit": "vitest run tests/unit",
     "test:browser": "vitest run tests/integration/website",
-    "test:dogfood": "vitest run tests/integration/website/dogfood.test.ts tests/integration/website/full-dogfood.test.ts tests/integration/website/landing-dogfood.test.ts tests/integration/website/profile-dogfood.test.ts"
+    "test:dogfood": "vitest run tests/integration/website/dogfood.test.ts tests/integration/website/full-dogfood.test.ts tests/integration/website/landing-dogfood.test.ts tests/integration/website/profile-dogfood.test.ts",
+    "gate": "node scripts/website-gate.mjs",
+    "gate:full": "node scripts/website-gate.mjs --full"
   },
   "engines": {
     "node": ">=20"
