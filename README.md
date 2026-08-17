@@ -16,10 +16,17 @@ This repository contains the public website and documentation. It is a static si
 ```bash
 pnpm build
 pnpm test
+pnpm test:browser
 pnpm dev
 ```
 
 The first run creates `.venv` and installs pinned dependencies from `requirements.txt`.
+
+Browser checks need Chromium once per machine:
+
+```bash
+pnpm exec playwright install chromium
+```
 
 Dev server default: `http://127.0.0.1:8000`
 

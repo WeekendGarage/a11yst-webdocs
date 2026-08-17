@@ -10,13 +10,16 @@
     "serve": "node scripts/ensure-venv.mjs && node scripts/serve.mjs",
     "preview": "node scripts/ensure-venv.mjs && node scripts/serve.mjs",
     "test": "vitest run tests/unit",
-    "test:unit": "vitest run tests/unit"
+    "test:unit": "vitest run tests/unit",
+    "test:browser": "vitest run tests/integration/website"
   },
   "engines": {
     "node": ">=20"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.10.1",
     "@types/node": "^22.10.2",
+    "playwright": "1.62.0",
     "typescript": "^5.7.2",
     "vitest": "^2.1.9",
     "yaml": "^2.7.0"
