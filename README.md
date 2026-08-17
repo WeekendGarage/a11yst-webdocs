@@ -28,6 +28,13 @@ Browser checks need Chromium once per machine:
 pnpm exec playwright install chromium
 ```
 
+Optional self-audit (dogfood) uses a local a11yst CLI. This repository does not depend on `@a11yst/cli`. Without `A11YST_BIN`, dogfood tests are skipped:
+
+```bash
+export A11YST_BIN=/path/to/a11yst   # executable, or packages/cli/dist/bin.js
+pnpm test:dogfood
+```
+
 Dev server default: `http://127.0.0.1:8000`
 
 ## Output

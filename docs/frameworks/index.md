@@ -45,7 +45,7 @@ Shows discovered routes, sources, and diagnostics per project.
 
 ## Official website
 
-The a11yst documentation site is **MkDocs + Material** with `framework: "html"`, explicit routes, and a local preview server. See `apps/website/a11yst.config.ts` in the repository.
+The a11yst documentation site is **MkDocs + Material** with `framework: "html"`, explicit routes, and a local preview server. See `a11yst.config.ts` in this repository.
 
 ## Choose a guide
 
