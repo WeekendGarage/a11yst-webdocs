@@ -1,6 +1,6 @@
 site_name: a11yst
 site_description: Continuous accessibility testing for modern web applications.
-# site_url is intentionally unset until a production domain is provided.
+site_url: https://www.a11yst.dev/
 use_directory_urls: true
 
 exclude_docs: |
@@ -60,6 +60,10 @@ extra_javascript:
 
 extra:
   generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/WeekendGarage/a11yst-webdocs
+      name: a11yst documentation on GitHub
 
 nav:
   - Getting Started: getting-started/index.md

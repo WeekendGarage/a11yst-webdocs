@@ -5,7 +5,7 @@ description: Supported web frameworks for detection, route discovery, and audits
 
 # Frameworks
 
-a11yst detects your web framework and uses a matching adapter for dev-server hints, route discovery, readiness, and source mapping.
+a11yst detects your web framework and uses an adapter for dev-server hints, route discovery, readiness, and source mapping.
 
 ## Support status
 
@@ -27,33 +27,4 @@ a11yst detect
 a11yst detect --json
 ```
 
-Set `framework` explicitly in config when detection is ambiguous.
-
-## Route discovery modes
-
-| Mode | Behavior |
-| --- | --- |
-| `off` | Only `routes` listed in config |
-| `fallback` (default) | Use adapter discovery; fall back to configured routes |
-| `merge` | Combine configured routes with discovered routes |
-
-```bash
-a11yst routes --explain
-```
-
-Shows discovered routes, sources, and diagnostics per project.
-
-## Official website
-
-The a11yst documentation site is **MkDocs + Material** with `framework: "html"`, explicit routes, and a local preview server. See `a11yst.config.ts` in this repository.
-
-## Choose a guide
-
-- [HTML](html.md)
-- [React](react.md)
-- [Next.js](next.md)
-- [Vue](vue.md)
-- [Nuxt](nuxt.md)
-- [Angular](angular.md)
-
-Configuration reference: [Configuration](../reference/configuration.md).
+Set `framework` in config when detection is ambiguous. Inspect planned URLs with `a11yst routes --explain`. Discovery modes (`off`, `fallback`, `merge`) are documented in [Route discovery and planning](../core-concepts/route-discovery-and-planning.md).

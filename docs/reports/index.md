@@ -4,32 +4,13 @@ description: Terminal, HTML, Markdown, JSON, SARIF, and JUnit report formats in 
 ---
 
 
-a11yst produces human-readable and machine-readable output from the same audit run.
+a11yst writes human and machine output from the same audit. JSON fields: [Result model](../reference/result-model.md).
 
-## Terminal
-
-The CLI summarizes run progress, findings grouped by severity, and exit guidance suitable for local development.
-
-Severity labels use **MINOR**, **MEDIUM**, **HIGH**, and **CRITICAL**.
-
-## HTML
-
-HTML reports provide browsable findings with evidence and severity presentation suitable for sharing inside a team.
-
-## Markdown
-
-Markdown reports support review in repositories, wikis, and pull requests.
-
-## JSON
-
-JSON output preserves the full structured result model for automation and custom tooling.
-
-## SARIF
-
-SARIF export integrates with compatible static-analysis viewers when enabled in your workflow.
-
-## JUnit
-
-JUnit XML supports CI systems that consume test-style result files.
-
-Detailed report field reference will expand in a later documentation phase.
+| Format | Use |
+| --- | --- |
+| Terminal | Local progress and findings by severity (**MINOR**–**CRITICAL**) |
+| HTML | Browsable findings and evidence |
+| Markdown | PRs, wikis, and review notes |
+| JSON | Automation (`--json` and the results bundle) |
+| SARIF | Static-analysis viewers (opt-in) |
+| JUnit | CI test-report consumers (opt-in) |

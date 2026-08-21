@@ -1,0 +1,6 @@
+{
+  "buildCommand": "pnpm build",
+  "outputDirectory": "site",
+  "installCommand": "pnpm install",
+  "trailingSlash": true
+}

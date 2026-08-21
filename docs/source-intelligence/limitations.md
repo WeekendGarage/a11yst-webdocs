@@ -5,49 +5,23 @@ description: Accuracy limits for source mapping and recommendations.
 
 # Limitations
 
-Source intelligence improves developer workflow but cannot replace manual accessibility review.
+Source intelligence does not replace manual accessibility review. Browser audits reflect the rendered DOM at audit time; they do not fully simulate assistive technologies.
 
-## Automated testing limits
-
-Browser audits reflect rendered DOM at audit time. They do not fully simulate all assistive technologies or every user interaction path.
-
-## Source mapping uncertainty
+## Source mapping
 
 | Condition | Typical outcome |
 | --- | --- |
 | Production minified assets | Weak or unmapped |
-| Client-only components | Candidate may point to wrapper, not leaf |
-| Third-party widgets | May map to integration boundary only |
-| Multiple matching components | `ambiguous` status with ranked candidates |
+| Client-only components | Candidate may point to a wrapper |
+| Third-party widgets | May map only to the integration boundary |
+| Multiple matching components | `ambiguous`, with ranked candidates |
 
-Never treat **likely source** as proof of compliance or exact blame without verification.
+Never treat **likely source** as proof of compliance without checking the file.
 
-## Recommendations are guidance
+## Recommendations
 
-Recommendations:
+They do not apply patches, may need design or content decisions, and ask for manual verification on subjective rules (contrast, visual design).
 
-- do not apply patches
-- may require design or content decisions
-- include manual verification steps for subjective rules (contrast, visual design)
+Mappers exist for html, react, next, vue, nuxt, and angular. Keyboard, large-text, and reduced-motion findings may map or recommend less completely than axe-sourced rules.
 
-## Framework coverage
-
-Mappers exist for html, react, next, vue, nuxt, angular. Other detected frameworks may audit successfully with limited or no mapping.
-
-## Heuristic and profile findings
-
-Keyboard, large-text, and reduced-motion profiles add a11yst-owned rules. Recommendations and mapping coverage differ from core axe-sourced rules.
-
-## When mapping is disabled
-
-```typescript
-sourceAnalysis: { enabled: false },
-```
-
-Findings still include severity, evidence, and reports — without mapping or recommendations.
-
-## Related
-
-- [Source mapping](source-mapping.md)
-- [Recommendations](recommendations.md)
-- [Troubleshooting](../troubleshooting/index.md)
+With `sourceAnalysis.enabled: false`, findings still include severity, evidence, and reports — without mapping or recipes.

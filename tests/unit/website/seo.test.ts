@@ -9,6 +9,8 @@ import {
   WEBSITE_DIST,
 } from "../../helpers/website/build.js";
 
+const PRODUCTION_ORIGIN = "https://www.a11yst.dev";
+
 async function readBuiltPage(route: string): Promise<string> {
   const suffix = route === "/" ? "index.html" : `${route.replace(/^\//, "")}index.html`;
   return readFile(join(WEBSITE_DIST, suffix), "utf8");
@@ -42,24 +44,37 @@ describe("website SEO foundation", () => {
     }
   });
 
-  it("keeps canonical URLs unset until production site_url is configured", async () => {
+  it("sets canonical URLs from the production site_url", async () => {
     await ensureWebsiteBuilt();
     const home = await readBuiltPage("/");
-    expect(home).not.toMatch(/<link rel="canonical" href="https?:\/\//);
+    expect(home).toContain(`<link rel="canonical" href="${PRODUCTION_ORIGIN}/">`);
+    const gettingStarted = await readBuiltPage("/getting-started/");
+    expect(gettingStarted).toContain(
+      `<link rel="canonical" href="${PRODUCTION_ORIGIN}/getting-started/">`,
+    );
   });
 
-  it("includes Open Graph foundation on the home page", async () => {
+  it("includes Open Graph and Twitter metadata on the home page", async () => {
     await ensureWebsiteBuilt();
     const home = await readBuiltPage("/");
     expect(home).toMatch(/property="og:title"/);
     expect(home).toMatch(/property="og:description"/);
-    expect(home).not.toMatch(/property="og:url" content="https?:\/\//);
+    expect(home).toContain(`property="og:url" content="${PRODUCTION_ORIGIN}/"`);
+    expect(home).toMatch(/property="og:image"/);
+    expect(home).toMatch(/name="twitter:card"/);
+    expect(home).toContain('type="application/ld+json"');
   });
 
-  it("generates a sitemap scaffold without production absolute URLs", async () => {
+  it("generates sitemap.xml and robots.txt for the production origin", async () => {
     await ensureWebsiteBuilt();
     const sitemap = await readFile(join(WEBSITE_DIST, "sitemap.xml"), "utf8");
     expect(sitemap).toContain("<urlset");
-    expect(sitemap).not.toMatch(/<loc>https?:\/\//);
+    expect(sitemap).toContain(`<loc>${PRODUCTION_ORIGIN}/</loc>`);
+    expect(sitemap).toContain(`<loc>${PRODUCTION_ORIGIN}/getting-started/</loc>`);
+    expect(sitemap).not.toMatch(/example\.com/);
+
+    const robots = await readFile(join(WEBSITE_DIST, "robots.txt"), "utf8");
+    expect(robots).toMatch(/User-agent:\s*\*/i);
+    expect(robots).toContain(`Sitemap: ${PRODUCTION_ORIGIN}/sitemap.xml`);
   });
 });

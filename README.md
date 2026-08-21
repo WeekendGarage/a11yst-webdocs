@@ -2,8 +2,6 @@
 
 Official documentation website for a11yst.
 
-**a11yst** — Your accessibility analyst.
-
 This repository contains the public website and documentation. It is a static site built with MkDocs and Material for MkDocs.
 
 ## Requirements

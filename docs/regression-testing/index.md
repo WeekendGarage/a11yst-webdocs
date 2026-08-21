@@ -5,46 +5,15 @@ description: Compare audits over time with baselines, lifecycle classifications,
 
 # Regression testing overview
 
-Regression testing in a11yst means comparing a new audit against a stored **baseline**. The baseline records fingerprints of findings you have seen before; the next run classifies each finding as **new**, **known**, **regressed**, or **resolved**.
-
-This section documents operational workflows. For the mental model (projects, routes, profiles, and findings), see [Core concepts](../core-concepts/index.md).
+Regression testing compares a new audit against a stored **baseline**. Each finding is **new**, **known**, **regressed**, or **resolved**.
 
 !!! note "Baseline is not approval"
-    A finding present in the baseline is **not** marked as acceptable, compliant, or safe. The baseline is a comparison reference only. Use [classifications](classifications.md) when you need to record disposition separately from lifecycle status.
+    A finding in the baseline is **not** marked acceptable or compliant. It is only a comparison reference. Use [classifications](classifications.md) for disposition.
 
-## What you get
+Typical loop: audit and review → [create or update a baseline](updating-baseline.md) → change the app → audit again → triage new/regressed findings → optionally fail CI with [policies](policies.md).
 
-| Output | Purpose |
-| --- | --- |
-| Lifecycle status per finding | See what changed since the last stored baseline |
-| `baselineSummary` in JSON | Counts of new, known, regressed, and resolved findings |
-| CI policy evaluation | Optional pass/fail gates on new or regressed findings |
-| Baseline file | Versioned JSON at `.a11yst/baseline.json` by default |
-
-## Typical workflow
-
-1. Run an audit and review findings.
-2. Create or update a baseline when the current set is your comparison reference — see [Updating a baseline](updating-baseline.md).
-3. Change application code.
-4. Run the next audit; a11yst compares against the baseline automatically when `baseline.compare` is enabled.
-5. Triage **new** and **regressed** findings; confirm **resolved** findings.
-6. In CI, enable [policies](policies.md) so unexpected changes fail the job — see [CI workflow](ci-workflow.md).
-
-## Commands
-
-| Task | Command |
-| --- | --- |
-| Audit with comparison | `a11yst audit` |
-| Create baseline from results | `a11yst baseline create --from .a11yst/results/latest.json` |
-| Preview baseline update | `a11yst baseline update --from … --dry-run` |
-| Apply baseline update | `a11yst baseline update --from … --yes` |
-| Baseline status | `a11yst baseline status` |
-| Filter findings by status | `a11yst findings --status new --status regressed` |
-
-## Next steps
-
-- [Baselines](baselines.md) — storage, fingerprints, and comparison mechanics
-- [Classifications](classifications.md) — lifecycle statuses and dispositions
-- [Updating a baseline](updating-baseline.md) — when and how to refresh the baseline file
-- [Policies](policies.md) — CI gates and severity thresholds
-- [CI workflow](ci-workflow.md) — recommended pipeline steps
+- [Baselines](baselines.md) — storage, fingerprints, comparison
+- [Classifications](classifications.md) — lifecycle and dispositions
+- [Updating a baseline](updating-baseline.md) — when to refresh the file
+- [Policies](policies.md) — CI gates
+- [CI workflow](ci-workflow.md) — pipeline practices

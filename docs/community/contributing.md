@@ -25,18 +25,9 @@ Until CLA activation, external code pull requests cannot be merged even when tec
 
 Do not submit personal identity information as part of contribution discussions.
 
-## Development
+## This documentation website
 
-From the repository root:
-
-```bash
-pnpm build
-pnpm dev
-```
-
-Bootstrap (first time): Python 3.10+ with `python3 -m venv` available. The website scripts create `.venv` and install pinned MkDocs dependencies automatically.
-
-See the repository `README.md` for current website commands.
+Preview and build commands for this site are in the repository `README.md`.
 
 ## Accessibility claims
 
